@@ -1,0 +1,73 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+body {
+    background:grey;
+    display:flex;
+    justify-content: center;
+    margin: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+}
+
+  .calculator {
+    width: 320px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    padding: 5px 5px 10px 5px;
+    border-radius: 4px;
+    background-color: lightskyblue;
+  }
+button{
+    height:64px;
+    width: 76px;
+    margin-top: 10px;
+    position: relative;
+    flex-flow: wrap row;
+    background: white;
+    border-radius: 3px;    
+}
+
+
+  .screen {
+    flex: 100%;
+    margin: 0;
+    padding-right: 7px;
+    height: 40px;
+    color: black
+    border: 1px grey solid;
+    font-weight: 600;
+
+  }
+
+  button { 
+    width: 76px;
+    height: 64px;
+    margin-top: 10 px;
+    position: relative;
+    flex-flow: wrap row;
+    background: white;
+    border-radius: 4px;
+  }
+
+  button:focus{
+    outline-offset: -4px;
+}
+  
+
+  @media all and (min-width: 800px) {
+    /* We invert order of first sidebar and main
+     * And tell the main element to take twice as much width as the other two sidebars 
+     */
+    .main { flex: 2 0px; }
+    .aside-1 { order: 1; }
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+  }
